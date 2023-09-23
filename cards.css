@@ -1,0 +1,24 @@
+body {
+	background: linear-gradient(blue ,rgb(0, 255, 225));
+	margin: 0;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.tiles {
+	margin: 48px auto;
+	width: max-content;
+	display: grid;
+	grid-template-columns: repeat(4, 100px);
+	gap: 16px;
+	box-sizing: border-box;
+}
+
+.tile {
+	height: 100px;
+	background: #b0b5b5;
+	border: 2px solid #444444;
+	cursor: pointer;
+    border-radius: 35%;
+}
