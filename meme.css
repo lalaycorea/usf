@@ -1,0 +1,44 @@
+.meme-generator {
+    margin: 30px auto;
+    width: 800px;
+    font-family: sans-serif;
+    background-color: aquamarine;
+    border-radius: 20px;
+  }
+  
+  .meme-generator label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 40px;
+    color: rgb(119, 119, 15);
+    text-align: center;
+   
+  }
+  
+  .meme-generator input {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    
+  }
+  
+  #meme {
+    width: 100%;
+    background-color: rgb(197, 99, 221);
+  }
+
+  body {
+    background: linear-gradient(gray, white);
+    background-repeat: no-repeat;
+  }
+  
+
+  #imageFileInput {
+font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 
+'Lucida Sans', Arial, sans-serif ;
+font-size: 15px;
+color: blueviolet;
+
+ 
+  }
