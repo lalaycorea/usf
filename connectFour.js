@@ -8,7 +8,7 @@ var board;
 
 var rows = 6;
 var columns = 7;
-var currColumns = []; //keeps track of which row each column is at.
+var currColumns = []; 
 
 window.onload = function() {
     setGame();
@@ -39,19 +39,19 @@ function setPiece() {
         return;
     }
 
-    //get coords of that tile clicked
+   
     let coords = this.id.split("-");
     let r = parseInt(coords[0]);
     let c = parseInt(coords[1]);
 
-    // figure out which row the current column should be on
+   
     r = currColumns[c]; 
 
-    if (r < 0) { // board[r][c] != ' '
+    if (r < 0) { 
         return;
     }
 
-    board[r][c] = currPlayer; //update JS board
+    board[r][c] = currPlayer; 
     let tile = document.getElementById(r.toString() + "-" + c.toString());
     if (currPlayer == playerBlack) {
         tile.classList.add("black-piece");
@@ -62,14 +62,14 @@ function setPiece() {
         currPlayer = playerBlack;
     }
 
-    r -= 1; //update the row height for that column
-    currColumns[c] = r; //update the array
+    r -= 1; 
+    currColumns[c] = r;
 
     checkWinner();
 }
 
 function checkWinner() {
-     // horizontal
+  
      for (let r = 0; r < rows; r++) {
          for (let c = 0; c < columns - 3; c++){
             if (board[r][c] != ' ') {
@@ -81,7 +81,7 @@ function checkWinner() {
          }
     }
 
-    // vertical
+   
     for (let c = 0; c < columns; c++) {
         for (let r = 0; r < rows - 3; r++) {
             if (board[r][c] != ' ') {
@@ -93,7 +93,7 @@ function checkWinner() {
         }
     }
 
-    // anti diagonal
+
     for (let r = 0; r < rows - 3; r++) {
         for (let c = 0; c < columns - 3; c++) {
             if (board[r][c] != ' ') {
@@ -105,7 +105,7 @@ function checkWinner() {
         }
     }
 
-    // diagonal
+    
     for (let r = 3; r < rows; r++) {
         for (let c = 0; c < columns - 3; c++) {
             if (board[r][c] != ' ') {
