@@ -1,4 +1,4 @@
-"""Feedback Flask app."""
+
 
 from flask import Flask, render_template, redirect, session
 from flask_debugtoolbar import DebugToolbarExtension
