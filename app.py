@@ -7,10 +7,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql:///blogly"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = 'ihaveasecret'
 
-# Having the Debug Toolbar show redirects explicitly is often useful;
-# however, if you want to turn it off, you can uncomment this line:
-#
-# app.config['DEBUG_TB_INTERCEPT_REDIRECTS'] = False
+
 
 toolbar = DebugToolbarExtension(app)
 
@@ -33,8 +30,7 @@ def page_not_found(e):
     return render_template('404.html'), 404
 
 
-##############################################################################
-# User route
+
 
 @app.route('/users')
 def users_index():
@@ -111,8 +107,7 @@ def users_destroy(user_id):
     return redirect("/users")
 
 
-##############################################################################
-# Posts route
+
 
 
 @app.route('/users/<int:user_id>/posts/new')
