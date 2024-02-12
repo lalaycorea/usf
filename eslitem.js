@@ -1,4 +1,4 @@
-/** Item in a shopping cart. */
+
 const items = require("./fakeDb")
 
 class Item {
@@ -6,14 +6,13 @@ class Item {
     this.name = name;
     this.price = price;
 
-    // keep track of all items
     items.push(this);
   }
 
   static findAll(){
     return items
   }
-  /** Update found item with matching name to data. */
+
 
   static update(name, data) {
     let foundItem = Item.find(name);
@@ -26,7 +25,7 @@ class Item {
     return foundItem;
   }
 
-  /** Find & return item with matching name. */
+
 
   static find(name) {
     const foundItem = items.find(v => v.name === name);
@@ -36,7 +35,7 @@ class Item {
     return foundItem
   }
 
-  /** Remove item with matching id. */
+  
 
 
   static remove(name) {
